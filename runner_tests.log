@@ -1,0 +1,24 @@
+05-Dec-24 21:24:15 | 6964 | INFO |  tests_12_4 | <module>: 10 | Log started.
+05-Dec-24 21:24:15 | 6964 | INFO |  tests_12_4 | test_challenge: 58 | test_challenge" выполнен успешно
+05-Dec-24 21:24:15 | 6964 | WARNING |  tests_12_4 | test_run: 54 | Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\tests_12_4.py", line 51, in test_run
+    self.assertEqual(self.__test_method(method_name='run', name=345, speed=-50), 100)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\tests_12_4.py", line 37, in __test_method
+    current_obj = Runner(name, speed)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\rt_with_exceptions.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано int
+05-Dec-24 21:24:15 | 6964 | WARNING |  tests_12_4 | test_walk: 47 | Неверная скорость для Runner
+Traceback (most recent call last):
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\tests_12_4.py", line 44, in test_walk
+    self.assertEqual(self.__test_method(method_name='walk', name='runner1', speed=-5), 50)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\tests_12_4.py", line 37, in __test_method
+    current_obj = Runner(name, speed)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\Программирование\Обучение\Python\Проекты\Module 12\rt_with_exceptions.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -5
